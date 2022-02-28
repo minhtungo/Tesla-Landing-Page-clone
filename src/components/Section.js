@@ -12,19 +12,18 @@ const Section = ({
   return (
     <Wrap bgImage={backgroundImg}>
       <Fade bottom>
-        {' '}
         <ItemText>
-          <h1>{title}</h1>
-          <p>{description}</p>
+          <Title>{title}</Title>
+          <Description>{description}</Description>
         </ItemText>
       </Fade>
 
       <Buttons>
-      <Fade bottom>
-        <ButtonGroup>
-          <LeftButton>{leftBtnText}</LeftButton>
-          {rightBtnText && <RightButton>{rightBtnText}</RightButton>}
-        </ButtonGroup>
+        <Fade bottom>
+          <ButtonGroup>
+            <LeftButton>{leftBtnText}</LeftButton>
+            {rightBtnText && <RightButton>{rightBtnText}</RightButton>}
+          </ButtonGroup>
         </Fade>
         <DownArrow src='/images/down-arrow.svg' />
       </Buttons>
@@ -53,10 +52,25 @@ const ItemText = styled.div`
   z-index: -1;
 `;
 
+const Title = styled.h1`
+  font-weight: 500;
+  font-size: 40px;
+
+  @media (max-width: 768px) {
+    font-size: 36px;
+  }
+`;
+
+const Description = styled.p`
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+`;
+
 const ButtonGroup = styled.div`
   display: flex;
   margin-bottom: 30px;
-  @media (min-width: 768px) {
+  @media (max-width: 768px) {
     flex-direction: column;
   }
 `;
@@ -84,7 +98,9 @@ const RightButton = styled(LeftButton)`
 
 const DownArrow = styled.img`
   margin-top: 20px;
-  height: 40px;
+  margin-bottom: 24px;
+  height: 30px;
+  fill: black;
   overflow-x: hidden;
   animation: animateDown infinite 1.5s;
 `;

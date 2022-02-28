@@ -1,0 +1,48 @@
+export const cars = [
+  {
+    id: 0,
+    title: 'Model S',
+    description: 'Order Online for Touchless Delivery',
+    image: 'model-s.jpg',
+    leftText: 'Customer order',
+    rightText: 'Existing inventory',
+  },
+  {
+    id: 1,
+    title: 'Model 3',
+    description: 'Order Online for Touchless Delivery',
+    image: 'model-3.jpg',
+    leftText: 'Customer order',
+    rightText: 'Existing inventory',
+  },
+  {
+    id: 2,
+    title: 'Model X',
+    description: 'Order Online for Touchless Delivery',
+    image: 'model-x.jpg',
+    leftText: 'Customer order',
+    rightText: 'Existing inventory',
+  },
+  {
+    id: 3,
+    title: 'Model Y',
+    description: 'Order Online for Touchless Delivery',
+    image: 'model-y.jpg',
+    leftText: 'Customer order',
+    rightText: 'Existing inventory',
+  },
+  {
+    id: 6,
+    title: 'Solar and Powerwall',
+    description: 'Power Everything',
+    image: 'solar-panel.jpg',
+    leftText: 'Learn More',
+  },
+  {
+    id: 7,
+    title: 'Accessories',
+    description: '',
+    image: 'accessories.jpg',
+    leftText: 'Shop Now',
+  },
+];

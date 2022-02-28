@@ -1,20 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 import Section from './Section';
+import { cars } from '../carInfo';
 
 const Home = () => {
   return (
     <Container>
-      <Section
-        title='Model S'
-        description='Order Online for Touchless Delivery'
-        backgroundImg='model-s.jpg'
-        leftBtnText="Customer order"
-        rightBtnText='Existing inventory'
-      />
-      <Section />
-      <Section />
-      <Section />
+      {cars.map((car, index) => (
+        <Section
+          key={index}
+          title={car.title}
+          description={car.description}
+          backgroundImg={car.image}
+          leftBtnText={car.leftText}
+          rightBtnText={car.rightText}
+        />
+      ))}
     </Container>
   );
 };
